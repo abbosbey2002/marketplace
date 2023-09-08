@@ -26,35 +26,17 @@ function Navbar() {
               </NavLink>
               <div className="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                <NavLink to="#" className="nav-link active">
+                  <li className="nav-item">
+                    <NavLink to="/" className="nav-link active">
+                      Home
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                <NavLink to="/accident" className="nav-link active">
                       Accident
-                      <i className="bx bx-down-arrow-alt" />
+                      {/* <i className="bx bx-down-arrow-alt" /> */}
                     </NavLink>
                    </li>
-                  <li className="nav-item">
-                    <NavLink to="#" className="nav-link active">
-                      Home
-                      <i className="bx bx-down-arrow-alt" />
-                    </NavLink>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <NavLink to="index.html" className="nav-link active">
-                          Home Demo - 1
-                        </NavLink>
-                      </li>
-                      <li className="nav-item">
-                        <NavLink to="index-2.html" className="nav-link">
-                          Home Demo - 2
-                        </NavLink>
-                      </li>
-                      <li className="nav-item">
-                        <NavLink to="index-3.html" className="nav-link">
-                          Home Demo - 3
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </li>
                   <li className="nav-item">
                     <NavLink to="#" className="nav-link">
                       Pages
