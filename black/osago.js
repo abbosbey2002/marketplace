@@ -1,0 +1,1 @@
+(sumInsured,  " ", citizenship ,  " ",  type_of_person ,  " ",  vehicle_type ,  " ",  drivers ,  " ",  period ,  " ",  cases)
