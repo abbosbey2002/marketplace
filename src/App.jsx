@@ -16,9 +16,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Index />} />
-        <Route path='accident' element={<Main />}>
-          <Route path='application' element={<Application />} />
-        </Route>
+        <Route path='/accident' element={<Main />} />
+         
       </Routes>
       <Footer />
     </>
