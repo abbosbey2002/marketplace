@@ -101,7 +101,9 @@ function Main() {
             setMiddleName(response.data.operationResult.person.middleNameLatin)
             setAddress(response.data.operationResult.person.address)
             setLoading(false);
+            setError(false)
         } catch (error) {
+          setOpenPerson(false);
             setError(true)
             setLoading(false);
             console.log(error)
