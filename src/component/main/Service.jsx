@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Service() {
   return (
@@ -9,9 +10,9 @@ function Service() {
           <span className="top-title">Our Services</span>
           <h2>Inon Best Insurance Services</h2>
         </div>
-        <a href="services.html" className="default-btn">
+        <NavLink to="services.html" className="default-btn">
           All Services
-        </a>
+        </NavLink>
       </div>
       <div className="row" data-cues="slideInUp" data-disabled="true">
         <div
@@ -32,7 +33,7 @@ function Service() {
               <img src="assets/images/services/couple.svg" alt="couple" />
             </div>
             <h3>
-              <a href="services-details.html">Life Insurance</a>
+              <NavLink to="/accident">Life Insurance</NavLink>
             </h3>
           </div>
         </div>
@@ -54,7 +55,7 @@ function Service() {
               <img src="assets/images/services/home.svg" alt="home" />
             </div>
             <h3>
-              <a href="services-details.html">Home Insurance</a>
+              <NavLink to="services-details.html">Home Insurance</NavLink>
             </h3>
           </div>
         </div>
@@ -76,7 +77,7 @@ function Service() {
               <img src="assets/images/services/lightbulb.svg" alt="lightbulb" />
             </div>
             <h3>
-              <a href="services-details.html">Business Insurance</a>
+              <NavLink to="services-details.html">Business Insurance</NavLink>
             </h3>
           </div>
         </div>
@@ -98,7 +99,7 @@ function Service() {
               <img src="assets/images/services/heart.svg" alt="heart" />
             </div>
             <h3>
-              <a href="services-details.html">Health Insurance</a>
+              <NavLink to="services-details.html">Health Insurance</NavLink>
             </h3>
           </div>
         </div>
@@ -120,7 +121,7 @@ function Service() {
               <img src="assets/images/services/car.svg" alt="car" />
             </div>
             <h3>
-              <a href="services-details.html">Car Insurance</a>
+              <NavLink to="/osago">Car Insurance</NavLink>
             </h3>
           </div>
         </div>
@@ -145,7 +146,7 @@ function Service() {
               />
             </div>
             <h3>
-              <a href="services-details.html">Travel Insurance</a>
+              <NavLink to="/osago">Travel Insurance</NavLink>
             </h3>
           </div>
         </div>

@@ -15,10 +15,10 @@ function Index() {
   return (
     <>
       <Header />
+      <Service />
       <Feture />
       <Partner />
       <About />
-      <Service />
       <Buy />
       <Statistica />
       <Experts />

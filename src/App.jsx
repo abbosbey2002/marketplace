@@ -6,6 +6,7 @@ import Navbar from './component/navbar/Navbar'
 import Footer from './component/footer/Footer'
 import Index from './component/main/Index'
 import Main from './component/accident/Main'
+import MainOsago from './component/osago/Main'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
             <Route path='/' element = {<Index />} />
             <Route path='/accident'  element = {<Main /> } />
+            <Route path='/osago'  element = {<MainOsago /> } />
       </Routes>
       <Footer />
     </>
