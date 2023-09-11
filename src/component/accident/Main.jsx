@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./main.css";
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import InsuredPerson from './InsuredPerson';
 
 
 
@@ -25,8 +26,15 @@ function Main() {
 
         console.log(birthDate, seria, passportNumber)
 
+        const [insuredState, setInsuredState] = useState(false);
 
-    function ShowPerson() {
+         const changeInsured = (e) => {
+            console.log(e.target.checked)
+            setInsuredState( e.target.checked)
+        };
+
+
+    function ShowPerson({onValueChange}) {
  
         return (
           <div className='border p-2 mt-5'> 
@@ -60,7 +68,10 @@ function Main() {
 
             </div>
 
-            <button className='btn btn-primary px-5 py-3   m-2'> <NavLink className="text-white" to="/accident/application"> Next </NavLink>  </button>
+            <div className='input-form-me  col-12 '>
+            <input  onChange={changeInsured} id='checkInsured'  className='mx-2 my-4' type="checkbox"  />
+            <label htmlFor="checkInsured">Insured o`zim</label>
+                </div>
           </div>
         );
       }
@@ -157,8 +168,10 @@ function Main() {
       </div>
       {/* call person data */}
       {loading && <Loading />}
-      {openPerson && <ShowPerson />}
+      {openPerson && <ShowPerson  />}
       {err && <ShowError />}
+
+       {insuredState && <InsuredPerson />}
     </div>
   );
 }
