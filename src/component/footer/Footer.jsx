@@ -30,24 +30,30 @@ function footer() {
                                                 expedita placeat facere possimus.
                                 </p>
                                 <ul className="follow-list">
-                                    <li>
-                                        <NavLink href="https://www.facebook.com/" target="_blank">
+                               
+                                <li>
+                                        <NavLink to="https://www.facebook.com/doradev.uz?mibextid=ZbWKwL" target="_blank">
                                             <i className="bx bxl-facebook"/>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="https://twitter.com/" target="_blank">
-                                            <i className="bx bxl-twitter"/>
+                                        <NavLink to="https://www.youtube.com/@doradigital" target="_blank">
+                                            <i className="bx bxl-youtube"/>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="https://www.linkedin.com/" target="_blank">
+                                        <NavLink to="https://www.linkedin.com/company/dora-holding/" target="_blank">
                                             <i className="bx bxl-linkedin"/>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="https://www.google.com/" target="_blank">
-                                            <i className="bx bxl-google"/>
+                                        <NavLink to="https://t.me/dora_support" target="_blank">
+                                            <i className="bx bxl-telegram"/>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="https://www.instagram.com/dora.uz/?igshid=MzRlODBiNWFlZA==" target="_blank">
+                                            <i className="bx bxl-instagram"/>
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -74,27 +80,27 @@ function footer() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="about.html">
+                                        <NavLink to="/accident">
                                             <i className="bx bx-chevron-right"/>
-                                            About Us
+                                            Accident
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="about.html">
+                                        <NavLink to="/osago">
                                             <i className="bx bx-chevron-right"/>
-                                            How It Works
+                                            Osago
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="blog.html">
+                                        <NavLink to="/register">
                                             <i className="bx bx-chevron-right"/>
-                                            Blog
+                                            Register
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="contact.html">
+                                        <NavLink to="/contact">
                                             <i className="bx bx-chevron-right"/>
-                                            Contact Us
+                                            Contact
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -115,33 +121,15 @@ function footer() {
                                 <h2>Our Services</h2>
                                 <ul className="footer-widget-list">
                                     <li>
-                                        <NavLink href="services-details.html">
+                                        <NavLink to="/osago">
                                             <i className="bx bx-chevron-right"/>
-                                            Bike Insurance
+                                            Osago
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink href="services-details.html">
+                                        <NavLink to="/accident">
                                             <i className="bx bx-chevron-right"/>
-                                            Finances Management
-                                        </NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink href="services-details.html">
-                                            <i className="bx bx-chevron-right"/>
-                                            Home Insurance
-                                        </NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink href="services-details.html">
-                                            <i className="bx bx-chevron-right"/>
-                                            Health Insurance
-                                        </NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink href="services-details.html">
-                                            <i className="bx bx-chevron-right"/>
-                                            General Insurance
+                                            Accident
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -164,19 +152,19 @@ function footer() {
                                     <div className="contact-icon">
                                         <img src="assets/images/contact-phone.svg" alt="svg"/>
                                     </div>
-                                    <NavLink href="tel:(800)2162020">(800) 216 2020</NavLink>
+                                    <NavLink to="tel:+998935135324">(93) 513 53 24</NavLink>
                                 </div>
                                 <div className="touch-content">
                                     <div className="contact-icon">
                                         <img src="assets/images/contact-mail.svg" alt="svg"/>
                                     </div>
-                                    <NavLink href="mailto:hello@inon.com">hello@inon.com</NavLink>
+                                    <NavLink to="mailto:info@dora.uz">info@dora.uz</NavLink>
                                 </div>
                                 <div className="touch-content">
                                     <div className="contact-icon">
                                         <img src="assets/images/contact-map.svg" alt="svg"/>
                                     </div>
-                                    <p>No. 12, Ribon Building, Walse street, Australia</p>
+                                    <p>Chilonzor region, Uzbekistan</p>
                                 </div>
                             </div>
                         </div>
@@ -192,11 +180,11 @@ function footer() {
                     <div className="d-flex align-items-center justify-content-center">
                         <p>
                             ©
-                            <b>Inon</b>
+                            <b>Market Place </b>
                             is Proudly Owned by
-                            <NavLink href="https://hibootstrap.com/" target="_blank">
+                            <NavLink to="https://dora.uz/" target="_blank">
                                 {" "}
-                                HiBootstrap
+                                Dora
                             </NavLink>
                         </p>
                     </div>

@@ -14,6 +14,7 @@ function Main() {
         const [middleName, setMiddleName] = useState('');
         const [adress, setAddress] = useState('');
         const [person, setPerson] = useState({})
+        const [insured, setInsured] = useState({})
 
         const [birthDate, setBirthdate] = useState('2002-04-14');
         const [seria, setSeria] = useState("AC");
@@ -33,41 +34,17 @@ function Main() {
             setInsuredState( e.target.checked)
         };
 
+        const request = {
+          IPOLIS_USERNAME: "kafilSite",
+          IPOLIS_PASSWORD: "4QFFw5tuF5",
+          IPOLIS_ENDPOINT: "http://kafilapi.i-polis.uz/api"
+        };
+
 
     function ShowPerson({onValueChange}) {
  
         return (
           <div className='border p-2 mt-5'> 
-            <div className='row'>
-
-                <div className='input-form-me col-5 d-flex'>
-            <label htmlFor="name">Name</label>
-            <input id='name' className='' type="text" value={name} disabled />
-                </div>
-
-                <div className='input-form-me col-5 d-flex'>
-            <label htmlFor="middle_name">Middle Name</label>
-            <input id='middle_name' className='' type="text" value={middleName} disabled />
-                </div>
-
-                <div className='input-form-me col-5 d-flex'>
-            <label htmlFor="last_name">Last Name</label>
-            <input id='last_name' className='' type="text" value={lastName} disabled />
-                </div>
-
-                <div className='input-form-me col-5 d-flex'>
-            <label htmlFor="phone">phone number</label>
-            <input id='last_name' className='' type="text" defaultValue={"+99899"} />
-                </div>
-
-                <div className='input-form-me col-12 d-flex'>
-            <label htmlFor="address">Adress</label>
-            <input id='address' className='' type="text" value={adress} disabled />
-                </div>
-         
-
-            </div>
-
             <div className='input-form-me  col-12 '>
             <input  onChange={changeInsured} id='checkInsured'  className='mx-2 my-4' type="checkbox"  />
             <label htmlFor="checkInsured">Insured o`zim</label>
@@ -79,16 +56,42 @@ function Main() {
 
   const [openPerson, setOpenPerson] = useState(false);
 
-  const dateChange = (e) => {
-    console.log(e.target.value);
+const getInsured = (birthDate, seria, passportNumber) => {
+
+  console.log('data => ', birthDate, seria, passportNumber);
+ 
+  async function getApplicantInfo(birthDate, seria, passportNumber ) {
+    try {
+        setLoading(true);
+      const response = await axios.get(`${request.IPOLIS_ENDPOINT}/eosgouz/provider/birthdate`, {
+        auth: {
+          username: request.IPOLIS_USERNAME,
+          password: request.IPOLIS_PASSWORD
+        },
+        params: {
+          birthdate: birthDate,
+          passportSeries: seria,
+          passportNumber: passportNumber
+        }
+      });
+      console.log(response.data.operationResult);
+      setInsured(response.data.operationResult.person)
+        setLoading(false);
+        setError(false)
+    } catch (error) {
+        setError(true)
+        setLoading(false);
+        console.log(error)
+        setErrorMessage(error.message)
+    //   throw new Error(error);
+    }
   }
 
+  getApplicantInfo(birthDate, seria, passportNumber)
+}
+
   const getAccident = () => {
-    const request = {
-      IPOLIS_USERNAME: "kafilSite",
-      IPOLIS_PASSWORD: "4QFFw5tuF5",
-      IPOLIS_ENDPOINT: "http://kafilapi.i-polis.uz/api"
-    };
+   
 
       async function getApplicantInfo() {
         try {
@@ -145,22 +148,22 @@ function Main() {
 
 
   return (
-    <div className="container">
+    <div className="container" style={{minHeight:"30rem"}}>
       {/* call person data */}
-      <div className="form">
-        <div>
-          <input type="text" placeholder='AAC' onChange={(e)=>{setSeria(e.target.value)}}  defaultValue={seria}/>
+      <div className="row">
+        <div className='form-group col-md-1'>
+          <input className='form-control' type="text" placeholder='AAC' onChange={(e)=>{setSeria(e.target.value)}}  defaultValue={seria}/>
         </div>
-        <div>
-          <input type="text" placeholder='Passport number' onChange={(e)=>{setPassport(e.target.value)}} defaultValue={passportNumber} />
+        <div className='form-group col-md-2'>
+          <input className='form-control' type="text" placeholder='Passport number' onChange={(e)=>{setPassport(e.target.value)}} defaultValue={passportNumber} />
         </div>
-        <div>
-          <input onChange={(e)=>{setBirthdate(e.target.value)}}  type="date" defaultValue={birthDate} />
+        <div className='form-group col-md-3'>
+          <input className='form-control' onChange={(e)=>{setBirthdate(e.target.value)}}  type="date" defaultValue={birthDate} />
         </div>
 
-        <div className="others-options d-flex align-items-center">
+        <div className="others-options d-flex align-items-center col-md-1">
           <div className="option-item">
-            <button onClick={getAccident} className="btn btn-seracr searchbtn" type="button">
+            <button onClick={getAccident} className="searchbtn" type="button">
               <i className="bx bx-search"></i>
             </button>
           </div>
@@ -171,7 +174,7 @@ function Main() {
       {openPerson && <ShowPerson  />}
       {err && <ShowError />}
 
-       {insuredState && <InsuredPerson />}
+       {insuredState && <InsuredPerson getInsured = {getInsured} />}
     </div>
   );
 }

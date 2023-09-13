@@ -23,64 +23,26 @@ function Service() {
             animationName: "slideInUp",
             animationDuration: "600ms",
             animationTimingFunction: "ease",
-            animationDelay: "0ms",
-            animationDirection: "normal",
-            animationFillMode: "both"
-          }}
-        >
-          <div className="single-services-card d-flex align-items-center">
-            <div className="services-icon">
-              <img src="assets/images/services/couple.svg" alt="couple" />
-            </div>
-            <h3>
-              <NavLink to="/accident">Life Insurance</NavLink>
-            </h3>
-          </div>
-        </div>
-        <div
-          className="col-lg-4 col-sm-6 col-md-6"
-          data-cue="slideInUp"
-          data-show="true"
-          style={{
-            animationName: "slideInUp",
-            animationDuration: "600ms",
-            animationTimingFunction: "ease",
             animationDelay: "180ms",
             animationDirection: "normal",
             animationFillMode: "both"
           }}
         >
           <div className="single-services-card d-flex align-items-center">
-            <div className="services-icon">
-              <img src="assets/images/services/home.svg" alt="home" />
+            <div className="services-icon bg-icon-color2">
+              <img src="assets/images/services/car.svg" alt="car" />
             </div>
             <h3>
-              <NavLink to="services-details.html">Home Insurance</NavLink>
+              <NavLink to="/osago">Car Insurance</NavLink>
             </h3>
           </div>
         </div>
-        <div
-          className="col-lg-4 col-sm-6 col-md-6"
-          data-cue="slideInUp"
-          data-show="true"
-          style={{
-            animationName: "slideInUp",
-            animationDuration: "600ms",
-            animationTimingFunction: "ease",
-            animationDelay: "360ms",
-            animationDirection: "normal",
-            animationFillMode: "both"
-          }}
-        >
-          <div className="single-services-card d-flex align-items-center">
-            <div className="services-icon bg-icon-color">
-              <img src="assets/images/services/lightbulb.svg" alt="lightbulb" />
-            </div>
-            <h3>
-              <NavLink to="services-details.html">Business Insurance</NavLink>
-            </h3>
-          </div>
-        </div>
+
+
+     
+
+       
+
         <div
           className="col-lg-4 col-sm-6 col-md-6"
           data-cue="slideInUp"
@@ -99,37 +61,17 @@ function Service() {
               <img src="assets/images/services/heart.svg" alt="heart" />
             </div>
             <h3>
-              <NavLink to="services-details.html">Health Insurance</NavLink>
+              <NavLink to="/accident">Health Insurance</NavLink>
             </h3>
           </div>
         </div>
+        
         <div
           className="col-lg-4 col-sm-6 col-md-6"
           data-cue="slideInUp"
           data-show="true"
           style={{
-            animationName: "slideInUp",
-            animationDuration: "600ms",
-            animationTimingFunction: "ease",
-            animationDelay: "180ms",
-            animationDirection: "normal",
-            animationFillMode: "both"
-          }}
-        >
-          <div className="single-services-card d-flex align-items-center">
-            <div className="services-icon bg-icon-color2">
-              <img src="assets/images/services/car.svg" alt="car" />
-            </div>
-            <h3>
-              <NavLink to="/osago">Car Insurance</NavLink>
-            </h3>
-          </div>
-        </div>
-        <div
-          className="col-lg-4 col-sm-6 col-md-6"
-          data-cue="slideInUp"
-          data-show="true"
-          style={{
+            display: "none",
             animationName: "slideInUp",
             animationDuration: "600ms",
             animationTimingFunction: "ease",
@@ -150,6 +92,7 @@ function Service() {
             </h3>
           </div>
         </div>
+        
       </div>
     </div>
   </div>

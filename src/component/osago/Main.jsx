@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import Pagetop from '../Pagetop';
 
 function Main() {
 
@@ -56,47 +57,9 @@ function Main() {
   function ShowPerson() {
 
       return (
-        <div className='border p-2 mt-5'> 
-          <div className='row'>
-
-              <div className='input-form-me col-5 d-flex'>
-          <label htmlFor="name">Vehicle Model</label>
-          <input id='name' className='' type="text" value={vehModel} disabled />
-              </div>
-
-              <div className='input-form-me col-5 d-flex'>
-          <label htmlFor="middle_name">Vehicle Type</label>
-          <input id='middle_name' className='' type="text" value={vehType} disabled />
-              </div>
-
-              <div className='input-form-me col-5 d-flex'>
-          <label htmlFor="last_name">Registration region</label>
-          <input id='last_name' className='' type="text" value={registrationRegion} disabled />
-              </div>
-
-              <div className='input-form-me col-5 d-flex'>
-          <label htmlFor="phone">Years of issue</label>
-          <input id='last_name' className='' type="text" value={issueOfYear} />
-              </div>
-
-              <div className='input-form-me col-6 d-flex'>
-          <label htmlFor="address">Car owner</label>
-          <input id='address' className='' type="text" value={vehOwner} disabled />
-              </div>
-
-
-              <div className='input-form-me col-6 d-flex'>
-          <label htmlFor="address">Engine of number</label>
-          <input id='address' className='' type="text" value={numberOFEngine} disabled />
-              </div>
-
-              
-       
-
-          </div>
-
-          <button className='btn btn-primary px-5 py-3   m-2'> <NavLink className="text-white" to="/accident/application"> Next </NavLink>  </button>
-        </div>
+       <div className=''>
+      <h1 className='text'> Next step</h1>
+       </div>
 
       );
     }
@@ -173,20 +136,23 @@ const ShowError = () => {
 
 
 return (
-  <div className="container">
+  <>
+  <Pagetop name="Osago" />
+
+  <div className="container my-5 py-5">
     {/* call person data */}
-    <div className="form">
-      <div>
-        <input type="text" placeholder='AAC' onChange={(e)=>{setTechpassportseria(e.target.value)}}  defaultValue={techpassportseria}/>
+    <div className="row">
+      <div className='form-group col-md-2' >
+        <input className='form-control' type="text" placeholder='AAC' onChange={(e)=>{setTechpassportseria(e.target.value)}}  defaultValue={techpassportseria}/>
       </div>
-      <div>
-        <input type="text" placeholder='Passport number' onChange={(e)=>{setTechPassportNumber(e.target.value)}} defaultValue={techPassportNumber} />
+      <div  className='form-group col-md-2'>
+        <input className='form-control' type="text" placeholder='Passport number' onChange={(e)=>{setTechPassportNumber(e.target.value)}} defaultValue={techPassportNumber} />
       </div>
-      <div>
-        <input onChange={(e)=>{setGovNumber(e.target.value)}}  type="text" defaultValue={govNumber} />
+      <div  className='form-group col-md-2'>
+        <input className='form-control' onChange={(e)=>{setGovNumber(e.target.value)}}  type="text" defaultValue={govNumber} />
       </div>
 
-      <div className="others-options d-flex align-items-center">
+      <div className="others-options d-flex align-items-center col-1">
         <div className="option-item">
           <button onClick={getAccident} className="btn btn-seracr searchbtn" type="button">
             <i className="bx bx-search"></i>
@@ -199,6 +165,7 @@ return (
     {openPerson && <ShowPerson />}
     {err && <ShowError />}
   </div>
+  </>
 );
 }
 

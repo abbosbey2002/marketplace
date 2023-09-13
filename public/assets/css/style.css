@@ -10,6 +10,20 @@
     --fontSize: 16px;
 }
 
+.searchbtn {
+    margin-right: 33px;
+    width: 47px;
+    height: 47px;
+    line-height: 50px;
+    border-radius: 100%;
+    background-color: rgba(45, 202, 164, .15);
+    color: var(--paragraphColor);
+    font-size: 25px;
+    border: none;
+    -webkit-transition: var(--transition);
+    transition: var(--transition)
+}
+
 body {
     font-size: var(--fontSize);
     font-weight: 400;
@@ -917,10 +931,10 @@ img {
     border-bottom: 1px solid rgba(196, 196, 196, .3);
     margin-bottom: 30px
 }
-.my-account-form .form-group {
+ .form-group {
     margin-bottom: 20px
 }
-.my-account-form .form-group .form-control {
+.form-group .form-control {
     background-color: #f7f7f7;
     padding: 15px 20px;
     font-weight: 400;

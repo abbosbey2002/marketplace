@@ -20,8 +20,8 @@ function Navbar() {
     <div className="container">
       <div className="main-responsive-menu mean-container">
         <div className="mean-bar">
-          <a
-            href="#nav"
+          <NavLink
+            to="#nav"
             className="meanmenu-reveal"
             onClick={openMenu}
             style={{
@@ -37,28 +37,28 @@ function Navbar() {
                 <span />
               </span>
             </span>
-          </a>
+          </NavLink>
           <nav className="mean-nav">
             <ul className="navbar-nav ms-auto" style={{ display: menuState }}>
               <li className="nav-item">
-                <a href="/" className="nav-link">
+                <NavLink to="/" className="nav-link">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/accident" className="nav-link">
+                <NavLink to="/accident" className="nav-link">
                   Accident
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/osago" className="nav-link">
+                <NavLink to="/osago" className="nav-link">
                   Osago
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="contact.html" className="nav-link">
+                <NavLink to="/contact" className="nav-link">
                   Contact Us
-                </a>
+                </NavLink>
               </li>
             </ul>
             <div className="others-options d-flex align-items-center">
@@ -68,15 +68,15 @@ function Navbar() {
                 </button>
               </div>
               <div className="option-item">
-                <a href="contact.html" className="default-btn">
+                <NavLink to="/contact" className="default-btn">
                   Get A Quote
-                </a>
+                </NavLink>
               </div>
             </div>
           </nav>
         </div>
         <div className="logo">
-          <a href="index.html">
+          <NavLink to="index.html">
             <img
               src="assets/images/black-logo.webp"
               className="black-logo"
@@ -87,7 +87,7 @@ function Navbar() {
               className="white-logo"
               alt="image"
             />
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@ function Navbar() {
   <div className="main-navbar">
     <div className="container-fluid">
       <nav className="navbar navbar-expand-md navbar-light">
-        <a className="navbar-brand" href="index.html">
+        <NavLink className="navbar-brand" to="index.html">
           <img
             src="assets/images/black-logo.webp"
             className="black-logo"
@@ -106,7 +106,7 @@ function Navbar() {
             className="white-logo"
             alt="image"
           />
-        </a>
+        </NavLink>
         <div className="mean-push" />
         <div
           className="collapse navbar-collapse mean-menu"
@@ -115,24 +115,24 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-                <a href="/" className="nav-link">
+                <NavLink to="/" className="nav-link">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/accident" className="nav-link">
+                <NavLink to="/accident" className="nav-link">
                   Accident
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/osago" className="nav-link">
+                <NavLink to="/osago" className="nav-link">
                   Osago
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="contact.html" className="nav-link">
+                <NavLink to="/contact" className="nav-link">
                   Contact Us
-                </a>
+                </NavLink>
               </li>
           </ul>
           <div className="others-options d-flex align-items-center">
@@ -141,10 +141,15 @@ function Navbar() {
                 <i className="bx bx-search" />
               </button>
             </div>
+            <div className="option-item mx-2">
+              <NavLink to="/register" className="default-btn">
+                Register
+              </NavLink>
+            </div>
             <div className="option-item">
-              <a href="contact.html" className="default-btn">
-                Get A Quote
-              </a>
+              <NavLink to="/register" className="">
+                Language
+              </NavLink>
             </div>
           </div>
         </div>
@@ -160,9 +165,9 @@ function Navbar() {
           <div className="circle circle-three" />
         </div>
       </div>
-      <a
+      <NavLink
 
-        href="#nav"
+        to="#nav"
         className="meanmenu-reveal"
  onClick={openMenu}
         style={{
@@ -179,7 +184,7 @@ function Navbar() {
             <span />
           </span>
         </span>
-      </a>
+      </NavLink>
       <div className="container">
         <div className="option-inner">
           <div className="others-options d-flex align-items-center">
@@ -189,9 +194,9 @@ function Navbar() {
               </button>
             </div>
             <div className="option-item">
-              <a href="contact.html" className="default-btn">
+              <NavLink to="/contact" className="default-btn">
                 Get A Quote
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

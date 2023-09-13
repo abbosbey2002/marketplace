@@ -16,15 +16,15 @@ function Index() {
     <>
       <Header />
       <Service />
-      <Feture />
       <Partner />
+      <Feture />
       <About />
-      <Buy />
+      {/* <Buy /> */}
       <Statistica />
-      <Experts />
+      {/* <Experts /> */}
       <Testimonials />
-      <Articele />
-      <Subscriibers />
+      {/* <Articele /> */}
+      {/* <Subscriibers /> */}
     </>
   )
 }

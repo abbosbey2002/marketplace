@@ -1,0 +1,14 @@
+.partCarusel{
+    transform:  translate3d(-10px, 0px, 0px);
+    animation: carouselAnimation 50s ease-in-out forwards infinite;}
+
+
+@keyframes carouselAnimation {
+    0% {  transform:  translate3d(-10px, 0px, 0px);}
+    50% {  transform:  translate3d(-3500px, 0px, 0px); }
+    100% {  transform:  translate3d(0, 0px, 0px); }
+  }
+  
+  .panther-logo img {
+    animation: carouselAnimation 1s ease-in-out forwards;
+  }
